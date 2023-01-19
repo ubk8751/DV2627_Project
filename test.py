@@ -17,7 +17,6 @@ def get_keys(image_url):
         body = {'url':image_url}
         headers = {'Ocp-Apim-Subscription-Key': '6af7226881af4bf4a83ccd810023a5a0'}
         response = requests.post(url, headers = headers, json = body).json()
-        print("hello")
         items = []
         print(response)
         if 'code' in response or 'statusCode' in response:
